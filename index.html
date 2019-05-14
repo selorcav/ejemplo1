@@ -15,11 +15,14 @@
 	<script>
 $(document).ready(function(){
   $("button").click(function(){
-    $("#menu").fadeToggle();
+  	 $(".menu").toggleClass("none", 1000);
   });
 });
 	</script>
 	<style>
+		*{
+			transition: 1s;
+		}
 		body{
 			background-image: url(shutterstock_140731432_sized.0.jpg);
 			background-size: cover;
@@ -74,6 +77,9 @@ $(document).ready(function(){
 			font-family: 'Oswald', sans-serif;
 			text-align: center;
 		}
+		.none{
+			display: none;
+		}
 	</style>
 </head>
 <body>
@@ -84,7 +90,7 @@ $(document).ready(function(){
 			<span class="icon-bar bottom-bar"></span>				
 		</button>
 	</div>
-	<div id="menu" class="menu">
+	<div class="menu none">
 		<ul>
 			<li>Motherboard</li>
 			<li>Processor</li>
